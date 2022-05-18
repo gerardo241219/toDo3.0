@@ -11,8 +11,8 @@ const Container = () => {
 
   useEffect(() => {
     const localS = () => {
-      const tasksList = JSON.parse(localStorage.getItem('tareas'));
-      setTask(tasksList);
+      const tasksList = JSON.parse(localStorage.getItem('tareas')) ?? [];
+      setTasks(tasksList);
     }
 
     localS();
