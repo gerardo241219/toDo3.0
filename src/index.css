@@ -1,0 +1,244 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10rem */
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;     /* Tamaño del scroll en vertical */
+  height: 8px;    /* Tamaño del scroll en horizontal */
+}
+
+*::-webkit-scrollbar:hover {
+  background-color: var(--bg-secondary);
+}
+
+/* ----------------- Custom propeties ----------------- */
+
+:root {
+  --bg-primary: #34495E;
+  --bg-secondary: #5D6D7E;
+  --bg-task: rgb(215,219,221, 0.5);
+  --bg-task-conclude: rgb(34, 153, 84);
+  --font-primary: 'Lato', sans-serif;
+  --font-secondary:'Lobster', cursive;
+  --font-color-mark: #BA4A00;
+  --font-color-mark-secondary: #A04000;
+}
+
+body {
+  background-color: var(--bg-primary);
+}
+
+.container {
+  width: 80%;
+  margin: 5rem auto 0 auto;
+}
+
+/* -------------------------- Globales --------------------*/
+fieldset {
+  font-size: 1.5rem;
+  color: white;
+  letter-spacing: 0.2rem;
+  font-family: var(--font-primary);
+}
+
+/* -------------------------- Header ----------------------*/
+
+.header {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-family: var(--font-secondary);
+  letter-spacing: 0.5rem;
+  margin-bottom: 5rem;
+}
+
+.headerTitle {
+  font-size: 5rem;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+.headerSlogan {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.mark {
+  color: var(--font-color-mark);
+  text-transform: uppercase;
+}
+
+@media(min-width: 768px){
+  .headerTitle {
+    font-size: 7rem;
+  }
+
+  .headerSlogan {
+    font-size: 3rem;
+  }
+}
+
+/* --------------------- Main --------------------*/
+
+@media(min-width: 768px){
+  .main {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+}
+
+/* --------------------- Form --------------------*/
+.container-form {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.inputs {
+  width: 100%;
+  margin-bottom: .5rem;
+}
+
+.inputs-first {
+  margin-top: 1rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: .8rem;
+}
+
+input[type="submit"] {
+  background-color: var(--font-color-mark);
+  border: none;
+  color: white;
+  letter-spacing: .4rem;
+  font-family: var(--font-secondary);
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--font-color-mark-secondary);
+}
+
+@media(min-width: 768px){
+  fieldset {
+    width: 100%;
+    font-size: 2rem;
+  }
+
+  input[type="submit"] {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    padding: 1.5rem;
+  }
+
+  input, textarea {
+    font-size: 2rem;
+  }
+}
+
+/* ------------------- List -----------------*/
+.container-list {
+  width: 100%;
+  
+  margin-bottom: 5rem;
+}
+
+.list {
+  height: 50vh;
+  overflow-y: scroll;
+}
+
+.task {
+  background-color: var(--bg-task);
+  text-align: start;
+  margin-bottom: 1rem;
+}
+
+.task:hover {
+  background-color: var(--bg-secondary);
+}
+
+.task-conclude {
+  background-color: var(--bg-task-conclude);
+}
+
+.task-conclude:hover {
+  background-color: var(--bg-task-conclude);
+}
+
+.taskTitleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.div-1 {
+  width: 90%;
+  cursor: pointer;
+}
+
+.div-2 {
+  width: 10%;
+  padding: 0 .5rem 0 0;
+}
+
+input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.taskTitle {
+  font-family: var(--font-secondary);
+  letter-spacing: 0.5rem;
+  font-weight: 100;
+}
+
+.taskTitle, .taskDescription {
+  margin: 0;
+  padding: 1rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 1rem;
+}
+
+.pDescription {
+  width: 70%;
+  text-align: justify;
+}
+
+.pDate {
+  width: 30%;
+  text-align: end;
+}
+
+.taskDate {
+  color: white;
+  font-size: 1rem;
+}
+
+.task-conclude-date {
+  color: white;
+}
+
+@media(min-width: 768px){
+  input[type="checkbox"] {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .taskDate {
+    font-size: 1.5rem;
+  }
+}
